@@ -1,0 +1,124 @@
+.containerMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
+    padding-right: 2rem;
+}
+
+.containerInfo p:first-child {
+    padding-bottom: 1rem;
+
+}
+
+.containerFile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.containerLines {
+    display: flex;
+    gap: 2rem;
+}
+
+.containerFile-title {
+    margin-bottom: 1rem;
+}
+
+hr.style1 {
+    border-top: 1px solid #00B5E2;
+    width: 100px;
+    height: 0.5rem;
+    background-color: #00B5E2;
+}
+
+hr.style2 {
+    border-top: 1px solid #C1C6C8;
+    width: 100px;
+    height: 0.5rem;
+    background-color: #C1C6C8;
+}
+
+.containerFile-subTitle {
+    margin-top: 5rem;
+    color: #003C71;
+}
+
+.containerSubInfo {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #F6F6F6;
+}
+
+.containerSubInfo h3 {
+    padding-top: 4rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: #00B5E2;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    display: block;
+    width: 350px;
+    background-color: #00B5E2;
+    color: #fff;
+    padding: 10px 80px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-style: dashed;
+}
+
+label:hover {
+    background-color: #0056b3;
+}
+
+label:active {
+    background-color: #003a75;
+}
+
+.containerSubInfo p:last-child {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    color: #333F48;
+}
+
+.containerButton {
+    display: flex;
+    justify-content: center;
+}
+
+.containerButton button {
+    background: #00B5E2;
+    padding: 1rem 2rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    .containerFile {
+        margin-left: 1rem;
+    }
+
+    .containerSubInfo {
+        margin-left: 1rem;
+        margin-right: 0rem;
+    }
+}
