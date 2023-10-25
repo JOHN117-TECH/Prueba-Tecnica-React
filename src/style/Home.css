@@ -3,12 +3,21 @@
     flex-direction: column;
 }
 
+.containerMain.true {
+    background: #242424;
+    height: 90vh;
+}
+
 .containerInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: 1rem;
     padding-right: 2rem;
+}
+
+.containerInfo.true p {
+    color: #cecece;
 }
 
 .containerInfo p:first-child {
@@ -23,6 +32,10 @@
     margin-top: 2rem;
 }
 
+.containerFile.true p {
+    color: #cecece;
+}
+
 .containerLines {
     display: flex;
     gap: 2rem;
@@ -30,6 +43,10 @@
 
 .containerFile-title {
     margin-bottom: 1rem;
+}
+
+.containerFile-title.true {
+    color: #4ea3f3;
 }
 
 hr.style1 {
@@ -65,6 +82,12 @@ hr.style4 {
     color: #003C71;
 }
 
+.containerFile-subTitle.true {
+    color: #4ea3f3;
+}
+
+
+
 .containerSubInfo {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -72,6 +95,14 @@ hr.style4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #F6F6F6;
+}
+
+.containerSubInfo.true {
+    background: #242424;
+}
+
+.containerSubInfo.true p {
+    color: #cecece;
 }
 
 .containerSubInfo h3 {

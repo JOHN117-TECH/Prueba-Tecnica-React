@@ -5,7 +5,7 @@ import Papa, { ParseResult } from 'papaparse';
 
 type CSVRow = { [key: string]: string };
 const Home = () => {
-  const { setCsv, setLoading, theme, loading } = useCsv();
+  const { setCsv, setLoading, theme } = useCsv();
 
   const navigate = useNavigate();
 
@@ -31,24 +31,24 @@ const Home = () => {
 
   return (
     <>
-      <div className="containerMain">
-        <div className="containerInfo">
+      <div className={`containerMain ${theme}`}>
+        <div className={`containerInfo ${theme}`}>
           <p>Último ingreso 05/10/2023 - 08:05 am</p>
           <p>Dirección IP:186.145.19.35</p>
         </div>
         <div className="containerFile">
-          <h2 className="containerFile-title">
+          <h2 className={`containerFile-title ${theme}`}>
             Cargue de facturas en dos pasos
           </h2>
           <div className="containerLines">
             <hr className="style1"></hr>
             <hr className="style2"></hr>
           </div>
-          <h1 className="containerFile-subTitle">
+          <h1 className={`containerFile-subTitle ${theme}`}>
             Carga la informacion de las facturas de tu empresa
           </h1>
         </div>
-        <div className="containerSubInfo">
+        <div className={`containerSubInfo ${theme}`}>
           <p>
             Lorem Ipsum es simplemente el texto de relleno de las imprentas y
             archivos de texto. Lorem Ipsum es simplemente el texto de relleno de

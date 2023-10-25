@@ -2,14 +2,17 @@ import React from 'react';
 import Vector from '../../assets/Vector.png';
 import Bandera from '../../assets/Bandera.jpeg';
 import '../../style/Header.css';
+import { useCsv } from '../../context/context';
 const Header = () => {
+  const { theme, setTheme } = useCsv();
+
   return (
     <>
       <header className="Header">
         <div className="Header-Logo">
           <img src={Vector} alt="" width={80} />
           <div className="toggle-btn" id="_1st-toggle-btn">
-            <input type="checkbox" />
+            <input type="checkbox" onClick={() => setTheme(!theme)} />
             <span></span>
           </div>
         </div>

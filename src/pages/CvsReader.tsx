@@ -39,20 +39,20 @@ const CvsReader = () => {
   return (
     <>
       {csvData.length > 0 && (
-        <div className="containerMain">
-          <div className="containerInfo">
+        <div className={`containerMain ${theme}`}>
+          <div className={`containerInfo ${theme}`}>
             <p>Último ingreso 05/10/2023 - 08:05 am</p>
             <p>Dirección IP:186.145.19.35</p>
           </div>
-          <div className="containerFile">
-            <h2 className="containerFile-title">
+          <div className={`containerFile ${theme}`}>
+            <h2 className={`containerFile-title ${theme}`}>
               Cargue de facturas en dos pasos
             </h2>
             <div className="containerLines">
               <hr className="style3"></hr>
               <hr className="style4"></hr>
             </div>
-            <h1 className="containerFile-subTitle">
+            <h1 className={`containerFile-subTitle ${theme}`}>
               Carga la informacion de las facturas de tu empresa
             </h1>
             <p>
@@ -61,7 +61,7 @@ const CvsReader = () => {
               de las imprentas y archivos .
             </p>
           </div>
-          <div className={`containerInput`}>
+          <div className={`containerInput ${theme}`}>
             <input
               type="text"
               placeholder="Buscar..."
