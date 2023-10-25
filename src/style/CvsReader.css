@@ -1,0 +1,107 @@
+.containerInput {
+    display: flex;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.containerInput input {
+    padding-bottom: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #00B5E2;
+}
+
+/* TABLE STYLES*/
+.containerTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 0rem 1rem 0rem 5rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.truePendiente {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.trueEnProgreso {
+    background-color: #3399ff;
+    color: #fff;
+}
+
+.truePagado {
+    background-color: #33cc33;
+    color: #fff;
+}
+
+.trueRechazada {
+    background-color: #ff0000;
+    /* Rojo */
+    color: #fff;
+}
+
+/* PAGINATE STYLES  */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0rem;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination li a:hover {
+    background-color: #0056b3;
+}
+
+.pagination li.active a {
+    background-color: #0056b3;
+}
+
+.pagination li.disabled a {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination li a:focus {
+    outline: none;
+}
+
+@media (max-width: 425px) {
+    .containerInput {
+        margin-left: 1rem;
+    }
+}

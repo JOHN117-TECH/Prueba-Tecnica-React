@@ -46,6 +46,20 @@ hr.style2 {
     background-color: #C1C6C8;
 }
 
+hr.style3 {
+    border-top: 1px solid #C1C6C8;
+    width: 100px;
+    height: 0.5rem;
+    background-color: #C1C6C8;
+}
+
+hr.style4 {
+    border-top: 1px solid #00B5E2;
+    width: 100px;
+    height: 0.5rem;
+    background-color: #00B5E2;
+}
+
 .containerFile-subTitle {
     margin-top: 5rem;
     color: #003C71;
@@ -67,13 +81,13 @@ hr.style2 {
     color: #00B5E2;
 }
 
-input[type="file"] {
+.containerSubInfo input[type="file"] {
     display: none;
 }
 
-label {
+.containerSubInfo label {
     display: block;
-    width: 350px;
+    width: 355px;
     background-color: #00B5E2;
     color: #fff;
     padding: 10px 80px;
@@ -84,11 +98,11 @@ label {
     border-style: dashed;
 }
 
-label:hover {
+.containerSubInfo label:hover {
     background-color: #0056b3;
 }
 
-label:active {
+.containerSubInfo label:active {
     background-color: #003a75;
 }
 

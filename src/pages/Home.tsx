@@ -1,6 +1,34 @@
-import '../../style/Home.css';
+import { useNavigate } from 'react-router-dom';
+import { useCsv } from '../context/context';
+import '../style/Home.css';
+import Papa, { ParseResult } from 'papaparse';
 
+type CSVRow = { [key: string]: string };
 const Home = () => {
+  const { setCsv, setLoading, theme, loading } = useCsv();
+
+  const navigate = useNavigate();
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    setLoading(true);
+    setTimeout(() => {
+      if (file) {
+        Papa.parse<CSVRow>(file, {
+          complete: (result: ParseResult<CSVRow>) => {
+            setCsv(result.data, Object.keys(result.data[0]));
+            setLoading(false);
+          },
+          header: true,
+        });
+      }
+    }, 4000);
+  };
+
+  const handleNavigate = () => {
+    navigate('/file');
+  };
+
   return (
     <>
       <div className="containerMain">
@@ -29,13 +57,13 @@ const Home = () => {
           <h3>Cargue de facturas</h3>
           <label>
             Subir o arrastrar el archivo aquí Excel,CSV
-            <input type="file" accept=".csv" />
+            <input type="file" onChange={handleFileChange} accept=".csv" />
           </label>
           <p>
             El documento debe ser formato csv o excel y un tamaño maximo de 1MB.
           </p>
           <div className="containerButton">
-            <button>Continuar</button>
+            <button onClick={handleNavigate}>Continuar</button>
           </div>
         </div>
       </div>
