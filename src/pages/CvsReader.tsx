@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useCsv } from '../context/context';
 import ReactPaginate from 'react-paginate';
+import {
+  ContainerFile,
+  ContainerFileSubTitle,
+  ContainerFileTitle,
+  ContainerInfo,
+  ContainerLines,
+  ContainerMain,
+} from '../style/Home';
+import { ContainerInput, ContainerTable, Table } from '../style/CvsReader';
 import '../style/CvsReader.css';
 type CSVRow = { [key: string]: string };
 
@@ -39,29 +48,29 @@ const CvsReader = () => {
   return (
     <>
       {csvData.length > 0 && (
-        <div className={`containerMain ${theme}`}>
-          <div className={`containerInfo ${theme}`}>
+        <ContainerMain className={`${theme}`}>
+          <ContainerInfo className={`${theme}`}>
             <p>Último ingreso 05/10/2023 - 08:05 am</p>
             <p>Dirección IP:186.145.19.35</p>
-          </div>
-          <div className={`containerFile ${theme}`}>
-            <h2 className={`containerFile-title ${theme}`}>
+          </ContainerInfo>
+          <ContainerFile className={`${theme}`}>
+            <ContainerFileTitle className={`${theme}`}>
               Cargue de facturas en dos pasos
-            </h2>
-            <div className="containerLines">
+            </ContainerFileTitle>
+            <ContainerLines>
               <hr className="style3"></hr>
               <hr className="style4"></hr>
-            </div>
-            <h1 className={`containerFile-subTitle ${theme}`}>
+            </ContainerLines>
+            <ContainerFileSubTitle className={`${theme}`}>
               Carga la informacion de las facturas de tu empresa
-            </h1>
+            </ContainerFileSubTitle>
             <p>
               Lorem Ipsum es simplemente el texto de relleno de las imprentas y
               archivos de texto. Lorem Ipsum es simplemente el texto de relleno
               de las imprentas y archivos .
             </p>
-          </div>
-          <div className={`containerInput ${theme}`}>
+          </ContainerFile>
+          <ContainerInput className={`${theme}`}>
             <input
               type="text"
               placeholder="Buscar..."
@@ -70,9 +79,9 @@ const CvsReader = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyPress={handleKeyPress}
             />
-          </div>
-          <div className="containerTable">
-            <table className={`table ${theme}`}>
+          </ContainerInput>
+          <ContainerTable>
+            <Table className={`${theme}`}>
               <thead>
                 <tr>
                   {csvHeaders.map((header, index) => (
@@ -109,7 +118,8 @@ const CvsReader = () => {
                     </tr>
                   ))}
               </tbody>
-            </table>
+            </Table>
+
             <ReactPaginate
               pageCount={pageCount}
               marginPagesDisplayed={2}
@@ -118,8 +128,8 @@ const CvsReader = () => {
               containerClassName={'pagination'}
               activeClassName={'active'}
             />
-          </div>
-        </div>
+          </ContainerTable>
+        </ContainerMain>
       )}
     </>
   );

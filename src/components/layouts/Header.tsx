@@ -1,21 +1,21 @@
-import React from 'react';
 import Vector from '../../assets/Vector.png';
 import Bandera from '../../assets/Bandera.jpeg';
 import '../../style/Header.css';
 import { useCsv } from '../../context/context';
+import { Headers, HeaderLogo } from '../../style/Header';
 const Header = () => {
   const { theme, setTheme } = useCsv();
 
   return (
     <>
-      <header className="Header">
-        <div className="Header-Logo">
+      <Headers>
+        <HeaderLogo>
           <img src={Vector} alt="" width={80} />
           <div className="toggle-btn" id="_1st-toggle-btn">
             <input type="checkbox" onClick={() => setTheme(!theme)} />
             <span></span>
           </div>
-        </div>
+        </HeaderLogo>
         <div className="Header-Nav">
           <nav>
             <li className="Link-a">
@@ -29,7 +29,7 @@ const Header = () => {
             </li>
           </nav>
         </div>
-      </header>
+      </Headers>
     </>
   );
 };
