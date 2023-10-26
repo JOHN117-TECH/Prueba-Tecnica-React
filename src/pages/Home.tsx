@@ -22,11 +22,12 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
+    const files = e.target.files?.[0];
+
     setLoading(true);
     setTimeout(() => {
-      if (file) {
-        Papa.parse<CSVRow>(file, {
+      if (files) {
+        Papa.parse<CSVRow>(files, {
           complete: (result: ParseResult<CSVRow>) => {
             setCsv(result.data, Object.keys(result.data[0]));
             setLoading(false);
@@ -75,7 +76,9 @@ const Home = () => {
             El documento debe ser formato csv o excel y un tamaño maximo de 1MB.
           </p>
           <ContainerButton>
-            <Button onClick={handleNavigate}>Continuar</Button>
+            <Button onClick={handleNavigate}>
+              Continuar
+            </Button>
           </ContainerButton>
         </ContainerSubInfo>
       </ContainerMain>

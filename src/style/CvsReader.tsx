@@ -59,28 +59,28 @@ const Table = styled.table`
 
   tbody tr td.truePendiente {
     color: black;
-    background-color: rgb(255, 251, 0);
+    background-color: rgb(253, 218, 37);
     padding: 0.5rem;
     text-align: center;
   }
 
   tbody tr td.trueEnProgreso {
     color: white;
-    background-color: rgb(0, 217, 255);
+    background-color: rgb(0, 181, 226);
     padding: 0.5rem;
     text-align: center;
   }
 
   tbody tr td.truePagado {
     color: white;
-    background-color: rgb(29, 224, 22);
+    background-color: rgb(92, 166, 82);
     padding: 0.5rem;
     text-align: center;
   }
 
   tbody tr td.trueRechazada {
     color: white;
-    background-color: rgb(226, 3, 3);
+    background-color: rgb(216, 52, 95);
     padding: 0.5rem;
     text-align: center;
   }
